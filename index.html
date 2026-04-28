@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>AR Картинка на коробке</title>
-    
+    <title>Premium AR Box</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 </head>
@@ -13,14 +12,14 @@
 
     <a-scene 
         embedded 
-        arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix;'
-        vr-mode-ui="enabled: false">
+        vr-mode-ui="enabled: false"
+        arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix;'>
         
         <a-assets>
-            <img id="staticImage" src="1234.png">
+            <img id="staticImage" src="123.png">
         </a-assets>
 
-        <a-marker preset="hiro">
+        <a-marker type="pattern" url="pattern-marker.patt">
             <a-image 
                 src="#staticImage" 
                 width="4.2" 
